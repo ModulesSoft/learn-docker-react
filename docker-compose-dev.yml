@@ -1,12 +1,14 @@
 version: "3"
 services:
   react-test-run:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
       - .:/app
     environment:
-      - REACT_APP_NAME=Yousefyml
+      - REACT_APP_NAME=Yousefyml-dev
     # env_file:
     # - ./.env
